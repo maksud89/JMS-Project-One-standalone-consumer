@@ -26,5 +26,5 @@ How to Run in eclipse:
 11. To check number of messages in particular queue, we can run this command below from jboss cli
   "/subsystem=messaging/hornetq-server=default/jms-queue=<QUEUE_NAME>:read-resource(include-runtime=true, include-defaults=true)"
 12. check "<persistence-enabled>true</persistence-enabled>" element in standalone-full. xml. "True" mean, even if the server goes        down or restarted, **unconsumed message will be there to consume later when server comes back**. 
-13. Check another two elements "<permission type="send" roles="guest"/> and <permission type="consume" roles="guest"/>"; they mean that anyone in the role of guest will be able to send and consume message
+13. Check another two elements "permission type="send" roles="guest" and permission type="consume" roles="guest"; they mean that anyone in the role of guest will be able to send and consume message
 14. ***Same project need to be tried with Durable*
